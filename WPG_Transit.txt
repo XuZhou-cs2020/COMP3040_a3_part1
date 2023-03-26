@@ -1,0 +1,126 @@
+openapi: 3.0.1
+info:
+  title: WPG transit simple ver
+  description: Get the location of given lat and lon, return the location key,and use the key for trip management.
+  version: '0.1'
+servers:
+  - url: https://api.winnipegtransit.com
+paths:
+  /v3/locations.json:
+    get:
+      description: entering default api key, lat and lon, then get the location key
+      parameters:
+        - name: api-key
+          in: query
+          schema:
+            type: string
+          example: Ouh7yeOXam4Aj0a8_SEa
+        - name: lon
+          in: query
+          schema:
+            type: string
+          example: '-97.15004630576576'
+        - name: lat
+          in: query
+          schema:
+            type: string
+          example: '49.836617900812286'
+      responses:
+        '200':
+          description: your infomation about the location, the location key will be kept for further use.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  locations:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        street-number:
+                          type: integer
+                        street:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            type:
+                              type: string
+                            key:
+                              type: integer
+                        centre:
+                          type: object
+                          properties:
+                            geographic:
+                              type: object
+                              properties:
+                                latitude:
+                                  type: string
+                                longitude:
+                                  type: string
+                            utm:
+                              type: object
+                              properties:
+                                zone:
+                                  type: string
+                                x:
+                                  type: integer
+                                'y':
+                                  type: integer
+                        type:
+                          type: string
+                        key:
+                          type: integer
+                  query-time:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"locations":[{"key":26030,"street-number":1456,"street":{"key":2818,"name":"Pembina
+                    Highway","type":"Highway"},"centre":{"utm":{"zone":"14U","x":633010,"y":5522102},"geographic":{"latitude":"49.83658","longitude":"-97.15027"}},"type":"address"},{"key":8444,"name":"Pembina
+                    Arms Condominum","categories":["Residential:
+                    Apartments"],"address":{"key":26031,"street-number":1462,"street":{"key":2818,"name":"Pembina
+                    Highway","type":"Highway"},"centre":{"utm":{"zone":"14U","x":633012,"y":5522074},"geographic":{"latitude":"49.83633","longitude":"-97.15025"}}},"type":"monument"},{"key":11223,"name":"Fort
+                    Garry Veterinary Hospital","categories":["Services:
+                    Veterinary"],"address":{"key":26028,"street-number":1444,"street":{"key":2818,"name":"Pembina
+                    Highway","type":"Highway"},"centre":{"utm":{"zone":"14U","x":633011,"y":5522148},"geographic":{"latitude":"49.83699","longitude":"-97.15024"}}},"type":"monument"},{"key":101375,"street":{"key":262,"name":"Bathgate
+                    Bay","type":"Bay"},"centre":{"utm":{"zone":"14U","x":633078,"y":5522120},"geographic":{"latitude":"49.83672","longitude":"-97.14931"}},"type":"intersection"},{"key":"101350:2818@783","street":{"key":2818,"name":"Pembina
+                    Highway","type":"Highway"},"cross-street":{"key":783,"name":"Clarence
+                    Avenue","type":"Avenue"},"centre":{"utm":{"zone":"14U","x":632973,"y":5522095},"geographic":{"latitude":"49.83652","longitude":"-97.15078"}},"type":"intersection"}],"query-time":"2023-03-26T00:12:15"}
+      servers:
+        - url: https://api.winnipegtransit.com
+    servers:
+      - url: https://api.winnipegtransit.com
+  
+  /v3/trip-planner.json:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: api-key
+          in: query
+          schema:
+            type: string
+          example: Ouh7yeOXam4Aj0a8_SEa
+        - name: origin
+          in: query
+          schema:
+            type: string
+          example: addresses/2818
+        - name: destination
+          in: query
+          schema:
+            type: string
+          example: addresses/26030
+        - name: time
+          in: query
+          schema:
+            type: string
+          example: '17:21'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: https://api.winnipegtransit.com
+    servers:
+      - url: https://api.winnipegtransit.com
