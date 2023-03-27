@@ -41,15 +41,15 @@ Following informations like street-number and street provide further details.
 
 * For trip-planner part, the resources is huge and we have to check it seperately.
  
-![p1](\pic\res_trip01.png)
+![p1](/pic/res_trip01.png)
 
 This series of data are general infomation about our trip: the number of trip method; start and end time and the  time takes on different behaviors.
 
-![p1](\pic\res_trip02.png)
+![p1](/pic/res_trip02.png)
   
 'from' or 'to' indicates your origin and destination, it also contains the location key and infomations about the street.
 
-![p1](\pic\res_trip03.png)
+![p1](/pic/res_trip03.png)
 
 'route'provide more infomation about public transport. We only need to check the 'number' to get the route number. 
 for this case, 'form' and 'to' will also show the stop name.
@@ -61,19 +61,19 @@ for this case, 'form' and 'to' will also show the stop name.
 
 * For location part, let's try the following values:
 
-![p1](\pic\sample_loc01.png)
+![p1](/pic/sample_loc01.png)
 
 status code 200 means it returns the key successfully.
 
-![p1](\pic\sample_loc02.png)
+![p1](/pic/sample_loc02.png)
 
 
 * Let's try trip-planner:
 
-![p1](\pic\sample_trip01.png)
+![p1](/pic/sample_trip01.png)
 
 And it returns:
 
-![p1](\pic\sample_trip02.png)
+![p1](/pic/sample_trip02.png)
 
 ---
