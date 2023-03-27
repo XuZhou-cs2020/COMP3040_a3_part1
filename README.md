@@ -30,7 +30,7 @@ This API comes from Winnipeg transit open sources. It takes the latitude and lon
 
 * For location part, here is a copy of resources.
 
- ![p1](\pic\res_loc.png)
+ ![p1](/pic/res_loc.png)
 
 The most important part is 'key', a number represent the location we choose. 
 
