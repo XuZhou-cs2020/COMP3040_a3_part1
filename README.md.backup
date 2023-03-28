@@ -26,7 +26,7 @@ The Winnipeg transit open source API allows users to input latitude and longitud
 
 ---
 
-### Resources:
+### resources:
 
 * For location part, here is a copy of resources.
 
@@ -56,7 +56,7 @@ for this case, 'form' and 'to' will also show the stop name.
 
 ---
 
-### Sample request and sample response:
+### sample request and sample response:
 
 
 * For location part, let's try the following values:
