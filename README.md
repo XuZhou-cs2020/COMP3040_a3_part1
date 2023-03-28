@@ -3,7 +3,7 @@
 ---
 ### Description:
 
-The Winnipeg transit open source API allows users to input latitude and longitude coordinates for specific locations and receive unique location keys as output. Additionally, the API facilitates trip planning between two locations and provides information on available transit options for the journey. 
+The Winnipeg transit open source API allows users to input latitude and longitude coordinates for specific locations and receives unique location keys as output. Additionally, the API facilitates trip planning between two locations and also provides information on available transit options.
 
 ---
 
