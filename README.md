@@ -1,4 +1,5 @@
 # COMP3040 A3 part 1：
+
 ---
 ### Description:
 
@@ -15,7 +16,7 @@ The Winnipeg transit open source API allows users to input latitude and longitud
      * lat: The latitude of your location. 
  
 
-*  /v3/trip-planner.json: The end points that manage the method of trip. It takes 2 location keys and time, return possible transit methods.
+*  /v3/trip-planner.json: The end points that manage the method of trip. It takes 2 keys location and time, return possible transit methods.
 
  * Parameter list:
      * api-key: The unique key that allowed you access the Winnipeg transit, for this assignment, it is **Ouh7yeOXam4Aj0a8_SEa**.
@@ -52,18 +53,18 @@ This series of data are general infomation about our trip: the number of trip me
 ![p1](/pic/res_trip03.png)
 
 'route'provide more infomation about public transport. We only need to check the 'number' to get the route number. 
-for this case, 'form' and 'to' will also show the stop name.
+for this case, 'from' and 'to' will also show the stop name.
 
 ---
 
 ### Sample request and sample response:
 
 
-* For location part, let's try the following values:
+* For location part, let us try the following values:
 
 ![p1](/pic/sample_loc01.png)
 
-status code 200 means it returns the key successfully.
+Status code 200 means it returns the key successfully.
 
 ![p1](/pic/sample_loc02.png)
 
